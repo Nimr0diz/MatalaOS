@@ -5,11 +5,18 @@
 #ifndef MATALAOS_NEW_H
 #define MATALAOS_NEW_H
 
+#include <iostream>
+#include <sstream>
+
 enum Genre{NEWS,SPORT,WEATHER};
 
 using namespace std;
 
 class New{
+protected:
+    int producerId;
+    int serialId;
+    Genre genre;
 public:
     New(const string& content);
     New(int producerId, int serialId, Genre genre);
@@ -24,6 +31,9 @@ public:
     void setGenre(Genre genre);
 
     string getContent();
+
+    static string genreToString(Genre gen);
+    static Genre stringToGenre(string str);
 };
 
 
