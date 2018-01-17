@@ -11,8 +11,10 @@ class Entity{
 protected:
     std::thread myThread;
 public:
+    Entity();
     virtual void start() = 0;
     virtual void stop() = 0;
+
 };
 
 #endif //MATALAOS_ENTITY_H
